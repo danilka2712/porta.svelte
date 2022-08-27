@@ -1,5 +1,9 @@
 <script>
 	import Icon from '@iconify/svelte';
+	import Logo from '$lib/img/logo.png'
+	import Image1 from '$lib/img/Image1.webp'
+	import Image2 from '$lib/img/Image2.png'
+
 
 	let name = '';
 	let number = '+ 7';
@@ -31,7 +35,7 @@
 	>
 		<div class="flex sm:absolute justify-between sm:w-full">
 			<div class="">
-				<img class="w-24" src="src\lib\img\logo.png" alt="" />
+				<img class="w-24" src={Logo} alt="" />
 			</div>
 			<div class="flex gap-5">
 				<p class="">Работы</p>
@@ -84,7 +88,7 @@
 					data-scroll
 					data-scroll-speed="2"
 					class="object-cover hover:opacity-50 duration-700 opacity-90 h-[50vh] sm:h-[105vh]"
-					src="src\lib\img\ll-005-scaled.webp"
+					src={Image1}
 					alt=""
 				/>
 			</div>
@@ -129,7 +133,7 @@
 					data-scroll
 					data-scroll-speed="3"
 					class="object-cover opacity-90 hover:opacity-50 duration-700 w-full h-[50vh] sm:h-[120vh]"
-					src="src\lib\img\Ресурс 1.png"
+					src={Image2}
 					alt=""
 				/>
 			</div>
