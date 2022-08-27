@@ -33,22 +33,26 @@
 		data-scroll-section
 		class=" sm:max-w-7xl h-[20vh] mx-9 mt-7 sm:mx-auto items-center sm:w-full relative sm:mt-16"
 	>
-		<div class="flex sm:absolute justify-between sm:w-full">
+		<div class="flex sm:absolute justify-between items-center sm:w-full">
 			<div class="">
 				<img class="w-24" src={Logo} alt="" />
 			</div>
-			<div class="flex gap-5">
+			<div class="hidden sm:flex gap-5">
 				<p class="">Работы</p>
 				<p class="">О нас</p>
 				<p class="">Контакты</p>
 			</div>
+			<div class="sm:hidden">
+				<Icon width="24" icon="ci:menu-duo" />
+			</div>
 		</div>
+
 	</div>
-	<div class="h-[90vh] max-w-7xl mx-auto flex justify-center items-center" data-scroll-section>
+	<div class="h-[80vh] max-w-7xl mx-auto flex justify-center sm:mt-0 mt-24 sm:items-center" data-scroll-section>
 		<div
-			class="sm:mx-32 mx-9 sm:mb-24 leading-normal sm:leading-tight tracking-normal text-2xl sm:text-4xl font-light"
+			class="sm:mx-32 mx-9 sm:mb-64 leading-normal sm:leading-tight tracking-normal text-2xl sm:text-4xl font-light"
 		>
-			<h1>
+			<h1 class="">
 				<span class=" font-medium">Комета</span> - это агентство цифрового бренда, которое живет там,
 				где сталкиваются дизайн, технологии и опыт. Мы одержимы творчеством — бросаем вызов тому, что
 				есть, и в то же время определяем, что будет дальше.
