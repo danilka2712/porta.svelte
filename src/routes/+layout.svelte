@@ -5,6 +5,7 @@
       import { page } from '$app/stores';
   
       import '../app.css';
+import TopMenu from '$lib/comp/topMenu.svelte';
   </script>
   
   <LocomotiveScrollProvider
@@ -21,6 +22,7 @@
       imageTarget={'.grid-item-media'}
   >
       <slot />
+
   </LocomotiveScrollProvider>
   
   <style>
