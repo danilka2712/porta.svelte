@@ -1,54 +1,53 @@
 <script>
 	import Icon from '@iconify/svelte';
-	import Logo from '$lib/img/logo.png'
-	import Image1 from '$lib/img/Image1.webp'
-	import Image2 from '$lib/img/Image2.png'
+	import Logo from '$lib/img/logo.svg';
+	import LogoWhite from '$lib/img/logowhite.svg';
+	import { fade } from 'svelte/transition';
 
-
-	let name = '';
-	let number = '+ 7';
-
-	let items = 'Веб-сайты';
-	let count = 1;
-	function clickMinus() {
-		count -= 1;
-		if (count === 1) {
-			items = 'Веб-сайты';
-		} else if (count === 2) {
-			items = 'Маркетинг';
-		}
+	import Image1 from '$lib/img/Image1.webp';
+	import Image2 from '$lib/img/Image2.png';
+	import Menu from '$lib/comp/menu.svelte';
+	import { menu } from '../stores';
+	function menuTorgget() {
+		menu.update(n => n = !n)
 	}
-	function clickPlus() {
-		count += 1;
-		if (count === 1) {
-			items = 'Веб-сайты';
-		} else if (count === 2) {
-			items = 'Маркетинг';
-		}
-	}
+
 </script>
 
+{#if $menu}
+	<Menu />
+{/if}
 <div data-scroll-container>
 	<div
 		data-scroll-section
-		class=" sm:max-w-7xl h-[20vh] mx-9 mt-7 sm:mx-auto items-center sm:w-full relative sm:mt-16"
+		class=" sm:max-w-7xl h-[20vh] mx-9 pt-7 sm:mx-auto items-center sm:w-full relative sm:pt-16"
 	>
-		<div class="flex sm:absolute justify-between items-center sm:w-full">
+		<div class="flex relative justify-between z-40 items-center sm:w-full">
 			<div class="">
-				<img class="w-24" src={Logo} alt="" />
+				{#if  $menu === true}
+				<img in:fade="{{delay: 500, duration: 1}}" out:fade="{{delay: 300, duration: 1}}" class="w-24 z-10 -top-1 absolute"  src={Logo} alt="" />
+					{:else}
+				<img  out:fade="{{delay: 500, duration: 1}}" class="w-24 z=0 -top-1 absolute"  src={LogoWhite} alt="" />
+				{/if}
 			</div>
 			<div class="hidden sm:flex gap-5">
 				<p class="">Работы</p>
 				<p class="">О нас</p>
 				<p class="">Контакты</p>
 			</div>
-			<div class="sm:hidden">
-				<Icon width="24" icon="ci:menu-duo" />
+			<div on:click={menuTorgget} class=" sm:hidden">
+				{#if $menu === true}
+				<Icon class="text-black"  width="24" icon="ci:menu-duo" />
+					{:else}
+					<Icon class="text-white"  width="24" icon="ci:menu-duo" />
+				{/if}
 			</div>
 		</div>
-
 	</div>
-	<div class="h-[80vh] max-w-7xl mx-auto flex justify-center sm:mt-0 mt-24 sm:items-center" data-scroll-section>
+	<div
+		class="h-[80vh] max-w-7xl mx-auto flex justify-center sm:mt-0 mt-24 sm:items-center"
+		data-scroll-section
+	>
 		<div
 			class="sm:mx-32 mx-9 sm:mb-64 leading-normal sm:leading-tight tracking-normal text-2xl sm:text-4xl font-light"
 		>
@@ -99,7 +98,9 @@
 			<div data-scroll data-scroll-speed="3" class="sm:w-1/2 flex flex-col sm:ml-36">
 				<div class="mt-20">
 					<h1 class="sm:text-3xl text-2xl font-semibold">Портфолио</h1>
-					<p class="text-[#7d7d7d] text-[32px] sm:text-5xl mt-8 leading-tight tracking-normal font-light">
+					<p
+						class="text-[#7d7d7d] text-[32px] sm:text-5xl mt-8 leading-tight tracking-normal font-light"
+					>
 						Верим в каждый проект<br />и доводим все до идеала
 					</p>
 				</div>
@@ -171,4 +172,5 @@
 </div>
 
 <style>
+	
 </style>
