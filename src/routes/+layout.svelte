@@ -14,7 +14,7 @@ import TopMenu from '$lib/comp/topMenu.svelte';
           smoothMobile: false,
           getDirection: true,
           getSpeed: true,
-          inertia: 0.3
+          inertia: 0.5
       }}
       watch={$page}
       location={$page.url}
