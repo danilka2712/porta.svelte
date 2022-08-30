@@ -3,8 +3,8 @@
 	import Icon from '@iconify/svelte';
 	import Logo from '$lib/img/logo.svg';
 	import { fade } from 'svelte/transition';
-	import { quintOut } from 'svelte/easing';
 	import LogoWhite from '$lib/img/logowhite.svg';
+	
 	function menuTorgget() {
 		menu.update((menu) => (menu = !menu));
 	}
@@ -18,7 +18,7 @@
 			{#if $menu === true}
 				<img
 					in:fade={{ delay: 450, duration: 100 }}
-					out:fade={{ delay: 250, duration: 5 }}
+					out:fade={{ delay: 450, duration: 5 }}
 					class="w-24 absolute top-0 z-10"
 					src={Logo}
 					alt=""
@@ -40,7 +40,7 @@
 			{/if}
 		</div>
 		<div class="sm:flex hidden gap-10">
-			<a href="/">Портфолио</a>
+			<a sveltekit:reload href="/about">Портфолио</a>
 			<a href="/">О нас</a>
 			<a href="/">Контакты</a>
 		</div>

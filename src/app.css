@@ -2,12 +2,14 @@
 @tailwind components;
 @tailwind utilities;
 
-
+*{
+	padding: 0;
+	margin: 0;
+}
 body {
 	font-family: 'Source Sans Pro', sans-serif;
 	background-color: #121212;
 	color: #f2f2f2;
-
 	
 }
 
@@ -38,7 +40,6 @@ body {
 	display: inline-block;
 	padding-right: 10px;
 }
-
 
 @keyframes marquee {
 	from {

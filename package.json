@@ -31,6 +31,7 @@
 		"@fontsource/fira-mono": "^4.5.0",
 		"@iconify/svelte": "^2.2.1",
 		"cookie": "^0.4.1",
+		"gsap": "^3.11.0",
 		"svelte-locomotive-scroll": "^0.0.5"
 	}
 }
