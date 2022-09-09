@@ -1,7 +1,7 @@
 <script>
 	import { menu } from '../../stores';
 	import Icon from '@iconify/svelte';
-	import Logo from '$lib/img/logo.svg';
+	import Logo from '$lib/img/Logo.svg';
 	import { fade } from 'svelte/transition';
 	import LogoWhite from '$lib/img/logowhite.svg';
 
