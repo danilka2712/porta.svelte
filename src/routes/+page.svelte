@@ -2,7 +2,7 @@
 	import Icon from '@iconify/svelte';
 	import { fade } from 'svelte/transition';
 	import Image1 from '$lib/img/Image1.webp';
-	import Image2 from '$lib/img/Image2.png';
+	import Image2 from '$lib/img/Image2.webp';
 	import { menu } from '../stores';
 	import TopMenu from '$lib/comp/topMenu.svelte';
 	import Menu from '$lib/comp/menu.svelte';
@@ -41,7 +41,7 @@
 					class="sm:mx-32 mt-56 sm:mt-0 mb-44 mx-9 leading-normal sm:leading-tight tracking-normal text-2xl sm:text-4xl font-light"
 				>
 					<h1 class="">
-						<span class=" font-medium">Комета</span> - это агентство цифрового бренда, которое живет
+						Комета - это агентство цифрового бренда, которое живет
 						там, где сталкиваются дизайн, технологии и опыт. Мы одержимы творчеством — бросаем вызов
 						тому, что есть, и в то же время определяем, что будет дальше.
 					</h1>
