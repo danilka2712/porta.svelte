@@ -3,7 +3,6 @@
 	import '../../age.scss';
 	import { menu } from '../../stores';
 	import Icon from '@iconify/svelte';
-	import Logo from '../../lib/img/Logo.svg';
 
 	import { fade } from 'svelte/transition';
 	import LogoWhite from '$lib/img/logowhite.svg';
@@ -34,17 +33,9 @@
 			class="flex sm:w-full sm:max-w-7xl relative z-30 items-center sm:px-4 mx-9 mt-9 sm:mx-auto  justify-between sm:mt-20"
 		>
 			<div>
-				{#if $menu === true}
-					<a href="/">
-						<img
-							in:fade={{ delay: 450, duration: 100 }}
-							out:fade={{ delay: 450, duration: 5 }}
-							class="w-24 absolute top-0 z-10"
-							src={Logo}
-							alt=""
-						/>
-					</a>
-				{:else}
+				{#if $menu === false}
+					
+
 					<a href="/">
 						<img
 							out:fade={{ delay: 450, duration: 100 }}
